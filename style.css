@@ -33,29 +33,33 @@ img {
 }
 
 h1, h2 {
- font-size: 4.0rem;
+/* clamp (min, ideal, alto)*/
+font-size:clamp(2.8rem, 2vw, 4rem);
+
+ font-size: 2.8rem;
  line-height: 3.6rem;
 
 }
 
 h2 {
-    margin-bottom:3.2rem ;
+ margin-bottom:3.2rem ;
 }
 
 ul, ol {
- padding-left:2.4rem;  
+ padding-left:2.4rem;
 }
 
 ul {
-    margin-bottom:3.2rem
+  margin-bottom:3.2rem;
 }
 
 p, li, strong {
- font-size:1.4rem;
- line-height:1.8rem; 
+ font-size: clamp(1.4rem, 1vw + 0.4rem, 2rem);
+ line-height:clamp (1.8rem, 1vw +0.4rem, 2.5rem); 
 }
 
 Button {
+ font-family: 'Source Serif 4';
  background: #A54328;
  color:white;
  border:0;
@@ -65,11 +69,15 @@ Button {
  margin-top: 3.2rem
 }
 
-@media (min-width:770px) {
-  main {
-    flex-direction:row; 
-    max-width:100%;
-    gap:16rem;
+@media (min-width:1120px) {
+ main {
+   margin-top:9rem;
+   flex-direction:row; 
+   max-width:fit-content;
+   gap:16rem;
+
+   padding: 9rem 6rem;
+
   }
 
  .recipe {
@@ -80,7 +88,24 @@ Button {
     max-width:52.5rem; 
  }
 
+ h1,h2 {
+ font-size: 4rem;
+ line-height:5rem;
+ }
  
+ p,li,strong {
+  font-size:2rem;
+  line-height:2.5rem;
+ }
+
+ button {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+ } 
+
+}
+
 
 
 
